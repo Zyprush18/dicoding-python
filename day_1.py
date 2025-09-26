@@ -43,6 +43,10 @@ print("Union:", union)
 intersection = set1.intersection(set2) # akan mengambil nilai yang sama
 print("Intersection:", intersection)
 
+# tuple data type
+tupleData = (1,2,3,4)
+print(tupleData)
+
 # dict data type
 profile = {'name': 'Mamang', 'age':19,'isStudent':False}
 print(type(profile))
@@ -105,5 +109,5 @@ print(replaceText.replace('coding', 'bahasa pemrogramman')) # kita akan mengubah
 
 print('AKU TEXT UPPERCASE'.isupper()) # mengecek apakah text atau string nya itu uppercase
 print('AKU TEXT UPPERCASE'.islower()) # mengecek apakah text atau string nya itu lowercase
-print('dicoding'.isalpha()) # mengembalikan nilai True jika semua karakter dalam string adalah huruf alfabet
+print('dicoding'.isalpha()) # mengembalikan nilai True jika semua karakter dalam string adalah huruf alfabet(kalau ad spasi walaupun alfbet semua tetap bakaln false)
 print('dicoding123'.isalnum()) # mengembalikan nilai True jika karakter dalam string adalah alfanumerik
