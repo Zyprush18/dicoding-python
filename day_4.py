@@ -1,4 +1,6 @@
 import array
+import numpy as np
+import sys
 
 # membuat array menggunakan library array
 x = array.array("i",[1,2,3,4,5]) # membuat array bertipe integer dengan menyatakan "i" sebelum array
@@ -67,3 +69,31 @@ print(f'nilai terbesar yang ada di dalam array tersebut adalah {left_pointer}')
 # matrix
 matrix_manual = [[1,2,3],[4,5,6],[7,8,9]] # array atau list di samping mirip dengan matrix dengan ordo 3x3
 print(matrix_manual)
+
+# buat matrix makai library numpy
+matriks = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(matriks)
+
+
+# mengecek ukuran memory yang di gunakan
+print('ukuran memory matriks list adalah: ',sys.getsizeof(matrix_manual) * len(matrix_manual))
+print('ukuran memori matriks numpy adalah: ', matriks.size * matriks.itemsize)
+
+# deklarasi nilai default matriks menggunakan nested list dan nested for
+matrics = [[0 for i in range(5)] for i in range(5)]
+print(matrics)
+
+# operasi matrix di kalikan dengan konstanta (nested list)
+var_mat = [[5,0],[1,-2]]
+def_mat = [[0 for i in range(2)] for i in range(2)]
+
+for v in range(len(var_mat)):
+    for w in range(len(var_mat[0])):
+        def_mat[v][w] = var_mat[v][w] * 2
+
+print("Ini adalah hasil dari perkalian matrix dengan nilai konstanta menggunakan nested list: ",def_mat)
+
+# operasi matrix di kalikan dengan konstanta (library numpy)
+mat_np = np.array([[5,0],[1,-2]]) * 2
+print("Ini adalah hasil dari perkalian matrix dengan nilai konstanta menggunakan numpy: ",mat_np)
+
